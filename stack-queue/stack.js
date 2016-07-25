@@ -1,29 +1,31 @@
-"use strict";
+'use strict';
 //LIFO
 function Stack() {
-  var items = [];
-  this.push = function(element) {
-    items.push(element);
-  };
-  this.pop = function() {
-    return items.pop();
-  };
-  this.peek = function() {
-    return items[items.length - 1];
-  };
-  this.isEmpty = function() {
-    return items.length == 0;
-  };
-  this.size = function() {
-    return items.length;
-  };
-  this.clear = function() {
-    items = [];
-  };
-  this.print = function() {
-    console.log(items.toString());
-  };
+  this.items = [];
 }
+Stack.prototype.push = Array.prototype.push.bind(this);
+Stack.prototype.pop = Array.prototype.pop.bind(this);
+Stack.prototype.peek = function() {
+  if (this.items === null) return null;
+  return this.items[this.items.length - 1];
+};
+Stack.prototype.size = function() {
+  this.items.length;
+};
+
+Stack.prototype.isEmpty = function() {
+  this.items.length == 0;
+};
+
+Stack.prototype.clear = function() {
+  this.items = [];
+};
+Stack.prototype.print = function() {
+  console.log(this.items.toString());
+};
+
+
+
 
 let stack1 = new Stack();
 stack1.push('a');
@@ -35,3 +37,4 @@ console.log('ISEMPTY', stack1.peek());
 console.log('POP', stack1.pop());
 console.log('CLEAR', stack1.clear());
 console.log('SIZE', stack1.size());
+console.log(stack1.items);
