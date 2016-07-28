@@ -9,10 +9,6 @@ Array.prototype.myreverse = function() {
   while (stack.length) {
     this[j++] = stack.pop();
   }
-  // var origLen = stack.length;
-  // for (let i = 0; i < origLen; i++) {
-  //   this.push(stack.pop());
-  // }
 };
 
 var arr = new Array('a', 'b', 'c', 'd');
