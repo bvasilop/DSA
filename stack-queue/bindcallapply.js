@@ -79,7 +79,7 @@ function List(){
 }
 var list = new List();
 list.addToList([1,2,3]);
-
+console.log('list:',list);
 
 
 var tester1 = {alist:[1,2,3]};
