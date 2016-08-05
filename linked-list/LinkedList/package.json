@@ -1,0 +1,19 @@
+{
+  "name": "DSA",
+  "version": "1.0.0",
+  "description": "",
+  "main": "LinkedList.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
