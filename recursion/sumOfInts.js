@@ -2,6 +2,7 @@
 
 function sumOfInts(sum, listOfInts) {
   let intMap = {};
+
   let result = [];
   listOfInts.forEach(function(item) {
     intMap[item] = true;
