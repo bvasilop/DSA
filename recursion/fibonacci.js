@@ -12,7 +12,7 @@ function fibIter(n) {
   }
   return result;
 }
-console.log('fibIter', 42, fibIter(42));
+console.log('fibIter', 100, fibIter(100));
 
 //tail recursion - much faster
 function fibtail(n, a, b) {
@@ -20,16 +20,16 @@ function fibtail(n, a, b) {
   if (n === 1) return b;
   return fibtail(n - 1, b, (a + b));
 }
-console.log('fibtail', 42, fibtail(42, 0, 1));
+console.log('fibtail', 100, fibtail(100, 0, 1));
 //non tail recursion
 function fib(n) {
   if (n === 0) return 0;
   if (n === 1) return 1;
   return fib(n - 1) + fib(n - 2);
 }
-console.log('fib recur nontail', 42, fib(42, 0, 1));
+console.log('fib recur nontail', 100, fib(100));
 
 //output a series
-for (var i = 0; i <= 42; i++) {
-  console.log('fibtail: n=', i, ':', fibtail(i, 0, 1));
-}
+// for (var i = 0; i <= 42; i++) {
+//   console.log('fibtail: n=', i, ':', fibtail(i, 0, 1));
+// }

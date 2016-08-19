@@ -15,3 +15,4 @@ function sumOfInts(sum, listOfInts) {
   return result;
 }
 console.log('sumOfInts(8,[3,4,5,4,3])', sumOfInts(8, [3, 4, 5, 4, 3]));
+console.log('sumOfInts(8,[2,3,4,5,6,5,4])', sumOfInts(8, [2, 3, 4, 5, 6, 5, 4]));
