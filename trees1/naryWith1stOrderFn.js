@@ -29,7 +29,6 @@ Tree.prototype.traverseAndProcess = function(process) {
     this.children[i].traverseAndProcess(process);
   }
 };
-
 //does a value already exist in the tree?
 Tree.prototype.exists = function(val) {
   var exists = false;
