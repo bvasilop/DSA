@@ -37,8 +37,19 @@ BinaryTree.prototype.traverse = function() {
   console.log(this.value);
   this.right && this.right.traverse();
 };
+BinaryTree.prototype.inOrder = function() {
+  var result = [];
+  var node = this;
+  var traverse = function(node) {
+    node.left && traverse(node.left);
+    result.push(node.value);
+    node.right && traverse(node.right);
+  };
+  traverse(node);
+  return result;
+};
 
-BinaryTree.prototype.traverse1 = function(){
+BinaryTree.prototype.traverse1 = function() {
   var str = '';
   this.left && (str += this.left.traverse1());
   str += this.value;
@@ -46,7 +57,7 @@ BinaryTree.prototype.traverse1 = function(){
   return str;
 };
 
-BinaryTree.prototype.traverse2 = function(){
+BinaryTree.prototype.traverse2 = function() {
   var acc = [];
   this.left && (acc.push(this.left.traverse2()));
   acc.push(this.value);
@@ -70,7 +81,7 @@ root.find('-').add(new BinaryTree('/'));
 root.find('/').add(new BinaryTree('3'));
 root.find('/').add(new BinaryTree('2'));
 //root.traverse();
-console.log('accumulate arrary',JSON.stringify(root.traverse2()));
+//console.log('accumulate array', JSON.stringify(root.traverse2()));
 //console.log(JSON.stringify(root));
-//console.log('In Order:',root.inOrder());
+console.log('In Order:', root.inOrder());
 //console.log(JSON.stringify(root.traverse1()));
