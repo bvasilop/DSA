@@ -74,7 +74,6 @@ BinaryTree.prototype.preOrder = function() {
 //load up the tree to create a set of operations with precedence
 var root = new BinaryTree('+');
 var times = new BinaryTree('*');
-
 root.add(times);
 times.add(new BinaryTree('3'));
 root.find('*').add(new BinaryTree('4'));
@@ -83,6 +82,7 @@ root.find('-').add(new BinaryTree('10'));
 root.find('-').add(new BinaryTree('/'));
 root.find('/').add(new BinaryTree('3'));
 root.find('/').add(new BinaryTree('2'));
+
 console.log('Pre Order:', root.preOrder());
 console.log('In Order (infix):', root.inOrder());
 console.log('Post Order (post fix, reverse polish):', root.postOrder());
